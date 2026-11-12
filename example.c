@@ -3,21 +3,18 @@
 
 int main(void)
 {
-int i;
-int grade[5];
-int sum = 0;
+char *pc;
+int *pi;
+double *pd;
 
-for (i=0;i<5;i++)
-{
-printf("grade[%i] = ", i);
-scanf("%d", &grade[i]);
-}
+pc = (char *)10000;
+pi = (int*)10000;
+pd = (double *)10000;
 
-for (i=0;i<5;i++)
-{
-printf("grade[%d] = %d\n", i, *(grade + i));
-sum = sum + *(grade + i);
-}
-printf("average: %d\n", sum / 5);
+printf("before : pc = %d, pi = %d, pd = %d\n", pc, pi, pd);
+pc++;
+pi++;
+pd++;
+printf("after : pc = %d, pi = %d, pd = %d\n", pc, pi, pd);
 return 0;
 }
